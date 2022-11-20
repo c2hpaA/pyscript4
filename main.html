@@ -1,26 +1,26 @@
 <html>
-  <head>
-    <title>learn dom for pyscript</title>
-    <link rel='stylesheet' type='text/css' media='screen' href='https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css'>
-    <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
-    <script defer src="https://pyscript.net/latest/pyscript.js"></script>
-  </head>
-  <body>
-  <h1>string counter</h1> 
-  <br>
-  <textarea name="input_texts" id="input_texts" placeholder="enter text"></textarea>
-  <br>
-  <button id="run" type="button" class="button is-primary" pys-onClick="count">Count</button>
-  <button id="clear" type="button" class="button is-danger" pys-onClick="clear">Clear</button>
-  </body>
-  <py-script>
-    input_texts=Element("input_texts")
-    op = Element("output")
-    def clear(*args, **kwargs):
-      input_texts.clear()
-    def count(*args, **kwargs):
-      number=len(input_texts.value)
-      op.write(number)
+<head>
+  <title>learn dom for pyscript</title>
+  <link rel='stylesheet' type='text/css' media='screen' href='https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css'>
+  <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
+  <script defer src="https://pyscript.net/latest/pyscript.js"></script>
+</head>
+<body>
+<h1>string counter</h1> 
+<br>
+<textarea name="input_texts" id="input_texts" placeholder="enter text"></textarea>
+<br>
+<button id="run" type="button" class="button is-primary" pys-onClick="count">Count</button>
+<button id="clear" type="button" class="button is-danger" pys-onClick="clear">Clear</button>
+</body>
+<py-script>
+input_texts=Element("input_texts")
+op = Element("output")
+def clear(*args, **kwargs):
+  input_texts.clear()
+def count(*args, **kwargs):
+  number=len(input_texts.value)
+  op.write(number)
 
-  </py-script>
+</py-script>
 </html>
