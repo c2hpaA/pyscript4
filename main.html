@@ -12,16 +12,16 @@
   <br>
   <button id="run" type="button" class="button is-primary" pys-onClick="count">Count</button>
   <button id="clear" type="button" class="button is-danger" pys-onClick="clear">Clear</button>
-    <py-script>
-      input_texts=Element("input_texts")
-      op = Element("output")
-      def clear(*args,**kwargs):
-        input_texts.clear()
-      def count(#args,**kwargs):
-        number=len(input_texts)
-        op.write(number)
+  </body>
+  <py-script>
+    input_texts=Element("input_texts")
+    op = Element("output")
+    def clear(*args,**kwargs):
+      input_texts.clear()
+    def count(#args,**kwargs):
+      number=len(input_texts)
+      op.write(number)
 
 
-    </py-script>
-   </body>
+  </py-script>
 </html>
