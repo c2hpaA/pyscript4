@@ -23,8 +23,10 @@
 <py-script>
 input_texts=Element("input_texts")
 op = Element("output")
+
 def clear(*args, **kwargs):
   input_texts.clear()
+
 def count(*args, **kwargs):
   number=len(input_texts.value)
   op.write(number)
